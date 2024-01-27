@@ -6,15 +6,15 @@
   
   <title>program-synthesis | David Chen&#39;s Note</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="程式合成 (program synthesis) 顧名思義就是透過某種方式合成程式碼。有兩種方法，分別是 deductive 和 inductive。 參考文獻:[1] Sobania, Dominik, Dirk Schweim, and Franz Rothlauf. “A comprehensive survey on program synthesis with evolutionary">
+  <meta name="description" content="程式合成 (program synthesis) 顧名思義就是透過某種方式合成程式碼。而合成之前需要由使用者定義，更術語一點稱為 program specifications，通常這個定義是模糊的、例如: 自然語言描述 (natural languagedescriptions)、輸入&#x2F;輸出範例。白話一點，如果做到很完美，甚至不需要寫程式或相關經驗的人也可以產生程式。 所以程式合成邏輯上">
 <meta property="og:type" content="article">
 <meta property="og:title" content="program-synthesis">
 <meta property="og:url" content="http://example.com/2024/01/25/program-synthesis/program-synthesis/index.html">
 <meta property="og:site_name" content="David Chen&#39;s Note">
-<meta property="og:description" content="程式合成 (program synthesis) 顧名思義就是透過某種方式合成程式碼。有兩種方法，分別是 deductive 和 inductive。 參考文獻:[1] Sobania, Dominik, Dirk Schweim, and Franz Rothlauf. “A comprehensive survey on program synthesis with evolutionary">
+<meta property="og:description" content="程式合成 (program synthesis) 顧名思義就是透過某種方式合成程式碼。而合成之前需要由使用者定義，更術語一點稱為 program specifications，通常這個定義是模糊的、例如: 自然語言描述 (natural languagedescriptions)、輸入&#x2F;輸出範例。白話一點，如果做到很完美，甚至不需要寫程式或相關經驗的人也可以產生程式。 所以程式合成邏輯上">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-01-24T19:30:20.000Z">
-<meta property="article:modified_time" content="2024-01-24T19:35:18.767Z">
+<meta property="article:modified_time" content="2024-01-26T08:11:50.087Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -93,13 +93,25 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>程式合成 (program synthesis) 顧名思義就是透過某種方式合成程式碼。<br>有兩種方法，分別是 deductive 和 inductive。</p>
+        <p>程式合成 (program synthesis) 顧名思義就是透過某種方式合成程式碼。<br>而合成之前需要由使用者定義，更術語一點稱為 program specifications，通常這個定義是模糊的、例如: 自然語言描述 (natural language<br>descriptions)、輸入&#x2F;輸出範例。白話一點，如果做到很完美，甚至不需要寫程式或相關經驗的人也可以產生程式。</p>
+<p>所以程式合成邏輯上跟 compiler 一樣，compiler 是編譯程式語言(ex: python、c++、c) 產生 executable，而程式合成的演算法就像是 compiler，他將更貼近人類的表達方式(user’s intent) 編譯成可執行的程式碼。</p>
+<p>其實現在的 ChatGPT 也可以做到類似的事情，所以有不少資源說明可以讓軟體開發者更有效率，但畢竟 ChatGPT 並非專門為了生成程式語言而設計，所以產生程式的結果可能會不如預期，所以可能需要優化一下。</p>
+<p>&lt;&lt;&lt;有些語言是模糊的，人類可能也會誤會，但也許 AI 能夠透過多次對話掌握更具體符合使用者需求的程式碼&gt;&gt;&gt;</p>
+<hr>
+<p>在正式了解程式合成以前先來了解一下目前的 program specifications 有哪些方式，按照 [1] 可大致分為三種。</p>
+<ul>
+<li>Natural Language Descriptions</li>
+<li>Input&#x2F;Output Examples</li>
+<li>Other Types of Definition、DSL</li>
+</ul>
+<p>演算法大致可以分為兩種方法，分別是 deductive 和 inductive [2]。</p>
+<p>Stack-Based GP<br>Grammar-Guided GP<br>Linear GP and Further Approaches</p>
 <p>參考文獻:<br>[1] Sobania, Dominik, Dirk Schweim, and Franz Rothlauf. “A comprehensive survey on program synthesis with evolutionary algorithms.” <em>IEEE Transactions on Evolutionary Computation</em> 27.1 (2022): 82-97.<br>[2] Jacindha, S., Abishek, G., Vasuki, P. (2022). Program Synthesis—A Survey. In: Kumar, A., Zurada, J.M., Gunjan, V.K., Balasubramanian, R. (eds) Computational Intelligence in Machine Learning. Lecture Notes in Electrical Engineering, vol 834. Springer, Singapore. <a target="_blank" rel="noopener" href="https://doi.org/10.1007/978-981-16-8484-5_39">https://doi.org/10.1007/978-981-16-8484-5_39</a><br>[3] Introduction to program synthesis (<a target="_blank" rel="noopener" href="https://people.csail.mit.edu/asolar/SynthesisCourse/index.htm">https://people.csail.mit.edu/asolar/SynthesisCourse/index.htm</a>)</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/01/25/program-synthesis/program-synthesis/" data-id="clrswgmp60001iez9bdwwgqu6" data-title="program-synthesis" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/01/25/program-synthesis/program-synthesis/" data-id="clrvc8ezg0002hnz9a86u8jdd" data-title="program-synthesis" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -109,10 +121,19 @@
     
 <nav id="article-nav">
   
+    <a href="/2024/01/25/frida/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          frida
+        
+      </div>
+    </a>
   
-    <a href="/2024/01/24/First-Post/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2024/01/24/Pwn/heap/house-of-spirit/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">My First Post</div>
+      <div class="article-nav-title">house of spirit</div>
     </a>
   
 </nav>
@@ -150,11 +171,15 @@
       <ul>
         
           <li>
-            <a href="/2024/01/25/program-synthesis/program-synthesis/">program-synthesis</a>
+            <a href="/2024/01/25/qiling/">qiling</a>
           </li>
         
           <li>
-            <a href="/2024/01/24/First-Post/">My First Post</a>
+            <a href="/2024/01/25/frida/">frida</a>
+          </li>
+        
+          <li>
+            <a href="/2024/01/25/program-synthesis/program-synthesis/">program-synthesis</a>
           </li>
         
           <li>
